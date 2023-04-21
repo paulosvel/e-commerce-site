@@ -1,8 +1,12 @@
 import { Box, Button } from "@mui/material";
+import CallIcon from '@mui/icons-material/Call';
 const Header = () => {
     return (
-<Box>
-    Products
+<Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between",padding:"10px", backgroundColor:"#2a2a72", color:"white" }}>
+    <Box sx={{display:"flex", flexDirection:"row", }}>
+    <CallIcon sx={{marginRight:"20px"}} />
+  <span>Products</span>  
+  </Box>
     <Button>
         MyCart
     </Button>
