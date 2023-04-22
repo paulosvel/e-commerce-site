@@ -46,12 +46,28 @@ const Products = () => {
   ];
   return (
     <>
-      {phones.map((item, index) => (
-        <Box key={index}>
-          <img src={item.img} />
-          <Box>{item.name}</Box>
+      <Box
+        sx={{ display: "flex", justifyContent: "center", paddingTop: "10px" }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            flexDirection: "row",
+            width: "50%",
+            paddingTop: "10px",
+            textAlign: "center",
+          }}
+        >
+          {phones.map((item, index) => (
+            <Box key={index} sx={{ margin: "15px", border: "1px solid black" }}>
+              <img width="180px" src={item.img} />
+              <Box>{item.name}</Box>
+            </Box>
+          ))}
         </Box>
-      ))}
+      </Box>
     </>
   );
 };
