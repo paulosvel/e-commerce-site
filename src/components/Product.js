@@ -5,20 +5,7 @@ export const Product = (props) => {
   const { id, name, img, price } = props.data;
   return (
     <>
-      <Box
-        sx={{ display: "flex", justifyContent: "center", paddingTop: "10px" }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            flexDirection: "row",
-            width: "50%",
-            paddingTop: "10px",
-            textAlign: "center",
-          }}
-        >
+
           <Box
             sx={{
               margin: "15px",
@@ -31,8 +18,6 @@ export const Product = (props) => {
             <Box>{price}€</Box>
             <Button>Add To Cart</Button>
           </Box>
-        </Box>
-      </Box>
     </>
   );
 };
