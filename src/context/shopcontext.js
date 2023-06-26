@@ -1,7 +1,6 @@
-import { Box } from "@mui/material";
 import { createContext, useState } from "react";
 import { items } from "../components/items";
-export const ShopContext = createContext();
+export const ShopContext = createContext(null);
 
 //empty cart as default
 const getDefaultCart = () => {
