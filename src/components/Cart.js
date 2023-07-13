@@ -10,8 +10,8 @@ const Cart = () => {
   const { cartItems } = useContext(ShopContext);
   return (
     <>
-      <Box>Cart Items</Box>
-      <Box className="cartItem">
+      <Box className="cart"  sx={{textAlign:"center",}}>Cart Items</Box>
+      <Box className="cart">
         {items.map((product) => {
           if (cartItems[product.id] !== 0) {
             return <CartItem data={product} />;

@@ -1,13 +1,22 @@
-import React from 'react'
-import { Box } from '@mui/material';
+import React, {useContext} from 'react'
+import { Box, Button } from '@mui/material';
+import { ShopContext } from '../context/shopcontext';
+import "./cart.css";
 export const CartItem = (props) => {
     const {id,name,price,img} = props.data;
+    const {cartItems} = useContext(ShopContext);
   return (
-      <><img src={img}></img>
-      <Box>
+      <>
+      <Box className="cartItem">
+      <img src={img}></img><Box>
           {name}
-      </Box>
-      <p>{price}</p>
-      </>
+      </Box><p>{price}</p><Box>
+              <Button>-</Button>
+              <input value={cartItems[id]} />
+              <Button >+</Button>
+          </Box>
+          </Box>
+          </>
+      
   );
 };
