@@ -22,13 +22,15 @@ const Cart = () => {
         })}
       </Box>
       {totalAmount > 0 ?
-      <Box>
+      <Box sx={{textAlign:"center"}}>
         
-        <p>Total: {totalAmount}€</p>
-        <Button onClick={()=>navigate("/")}>Continue Shopping</Button>
-      <Button>Checkout</Button>
+        <p style={{fontSize:"19px", fontWeight:"bolder"}}>Total: {totalAmount}€</p>
+      <Box sx={{display:"flex", justifyContent:"center", padding:"10px", gap:"2rem",}}>
+      <Button sx={{backgroundColor:"#2a2a72", color:"white",width:"175px", height:"50px"}} onClick={()=>navigate("/")}>Continue Shopping</Button>
+      <Button sx={{backgroundColor:"#2a2a72", color:"white",width:"175px", height:"50px"}}>Checkout</Button>
       </Box>
-      :<h1 style={{textAlign:"center", }}>Your Cart is Empty</h1>}
+      </Box>
+      :<h1 style={{textAlign:"center",  }}>Your Cart is Empty</h1>}
     </>
   );
 };
